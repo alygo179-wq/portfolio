@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Gohar — Computer Science Student & Web Developer</title>
+<meta name="description" content="Portfolio of Ali Gohar — computer science student at PGI, web developer, and musician from Hunza, Pakistan, learning AI, cybersecurity, and data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="boot-screen" id="bootScreen" role="status" aria-live="polite">
+  <pre class="boot-log" id="bootLog">booting portfolio.service...
+mounting /home/ali ... <span class="boot-ok">OK</span>
+loading skills.json ... <span class="boot-ok">OK</span>
+starting neural-net.py ... <span class="boot-ok">OK</span>
+welcome, visitor.</pre>
+</div>
+
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- scroll progress -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="hero" id="top">
+  <canvas id="terrain-canvas"></canvas>
+  <div class="hero-fade"></div>
+
+  <nav class="nav">
+    <span class="nav-mark">&lt;AG/&gt;</span>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"><i class="ext ext-js"></i>about.js</a></li>
+        <li><a href="#explore"><i class="ext ext-py"></i>explore.py</a></li>
+        <li><a href="#experience"><i class="ext ext-js"></i>experience.js</a></li>
+        <li><a href="#projects"><i class="ext ext-js"></i>projects.js</a></li>
+        <li><a href="#skills"><i class="ext ext-json"></i>skills.json</a></li>
+        <li><a href="#education"><i class="ext ext-md"></i>education.md</a></li>
+        <li><a href="#contact"><i class="ext ext-sh"></i>contact.sh</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <div class="terminal-window tilt reveal" data-tilt-max="6">
+      <div class="terminal-bar">
+        <span class="tdot tdot-red"></span><span class="tdot tdot-yellow"></span><span class="tdot tdot-green"></span>
+        <span class="terminal-title">ali@gohar — zsh</span>
+      </div>
+      <div class="terminal-scanlines" aria-hidden="true"></div>
+      <div class="terminal-body">
+        <p class="term-line"><span class="prompt">ali@gohar:~$</span> whoami</p>
+        <p class="term-output hero-name">Ali Gohar</p>
+        <p class="term-line"><span class="prompt">ali@gohar:~$</span> cat role.txt</p>
+        <p class="term-output hero-role">Computer science student, web developer, and music instructor building things that work quietly and well.</p>
+        <p class="term-line"><span class="prompt">ali@gohar:~$</span> cat currently_learning.txt</p>
+        <p class="term-output hero-learning">AI · Cybersecurity · Data — actively learning, and open to opportunities that build these skills.</p>
+        <p class="term-line"><span class="prompt">ali@gohar:~$</span> <span id="typedCmd"></span><span class="cursor-blink">&#9608;</span></p>
+      </div>
+    </div>
+
+    <div class="hero-links reveal">
+      <a href="mailto:alygo179@gmail.com" class="magnetic"><span class="flag">--email</span> alygo179@gmail.com</a>
+      <a href="https://linkedin.com/in/ali-gohar-3697a9399" target="_blank" rel="noopener" class="magnetic"><span class="flag">--linkedin</span> ali-gohar</a>
+      <a href="https://github.com/alygo179-wq" target="_blank" rel="noopener" class="magnetic"><span class="flag">--github</span> alygo179-wq</a>
+      
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to content">
+    <span></span>
+  </a>
+</header>
+
+<main>
+
+  <section class="about" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-copy reveal">
+        <h2 class="section-heading"><span class="heading-comment">// </span>about</h2>
+        <p class="about-text">I'm a Computer Science student, drawn to the point where a system actually gets used by real people — a hostel that stops losing paperwork, an office that stops emailing attendance sheets around. I build with HTML, CSS, JavaScript, Python, and MySQL on the web side, and with C++, Python, and x86 Assembly when the problem sits closer to the machine. Lately I've been pulled toward AI, cybersecurity, and data — I'm actively learning in these areas right now and looking for opportunities that help me build real skill in them.</p>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ============================================================
+    "CURRENTLY EXPLORING" — the 3D neural-network visual below is
+    generated entirely in script.js (see initNeuralNet). To change
+    the topics, just edit the <ul class="explore-list"> items and
+    the intro paragraph — no changes needed to the 3D canvas.
+    ============================================================
+  -->
+  <section class="explore" id="explore">
+    <div class="section-inner explore-grid">
+      <div class="explore-copy reveal">
+        <h2 class="section-heading">
+          <span class="heading-comment">// </span>currently exploring
+          <span class="badge-live"><span class="badge-live-dot"></span>growing</span>
+        </h2>
+        <p class="about-text">The next layer I'm building toward is where software gets smarter and safer: how models learn from data, how systems get attacked and defended, and how to make sense of data at scale. I'm early in this and learning deliberately — coursework, self-study, and hands-on practice — while looking for internships and projects that let me grow in these areas.</p>
+        <ul class="explore-list">
+          <li><span class="dot dot-web"></span>Artificial Intelligence &amp; ML <span class="explore-status">learning</span></li>
+          <li><span class="dot dot-prog"></span>Cybersecurity &amp; secure systems <span class="explore-status">learning</span></li>
+          <li><span class="dot dot-tools"></span>Data Science &amp; analysis <span class="explore-status">learning</span></li>
+        </ul>
+      </div>
+      <div class="explore-visual reveal">
+        <canvas id="neuralnet-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!--
+    ============================================================
+    PROJECTS — add new project cards inside .project-grid below.
+    See README.md ("Adding a new project") for a copy-paste
+    template and full instructions. Each card flips on click to
+    show more detail — no JS/CSS changes needed for new cards.
+    ============================================================
+  -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <h2 class="section-heading reveal"><span class="heading-comment">// </span>projects</h2>
+      <p class="skill-hint">click a card to flip it</p>
+
+      <div class="project-grid">
+        <article class="project-card reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <p class="project-meta">Lead Developer · PGI · 2024</p>
+              <h3 class="project-title">PGI Hostel Management System</h3>
+              <p class="project-desc">A custom, automated room-allocation system built to replace manual record-keeping.</p>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-face card-back">
+              <div>
+                <p class="project-meta">Details</p>
+                <p class="project-desc">Replaced manual room-allocation record-keeping with a custom, automated system, with a mobile-first interface used by 50+ residents and authentication built in to protect student and admin data.</p>
+              </div>
+              <a href="https://github.com/alygo179-wq" target="_blank" rel="noopener" class="card-link">View more on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <p class="project-meta">Developer · Rawat · 2025</p>
+              <h3 class="project-title">MASM Class Record System</h3>
+              <p class="project-desc">A high-speed data management tool written in x86 Assembly.</p>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-face card-back">
+              <div>
+                <p class="project-meta">Details</p>
+                <p class="project-desc">Engineered a high-speed data management tool in x86 Assembly, featuring instant file restoration and low-level disk persistence — built for speed with no runtime to hide behind.</p>
+              </div>
+              <a href="https://github.com/alygo179-wq" target="_blank" rel="noopener" class="card-link">View more on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <p class="project-meta">Developer · Google Apps Script · 2026</p>
+              <h3 class="project-title">HRPulse</h3>
+              <p class="project-desc">A Google Sheets attendance system that checks where you actually are before marking you present.</p>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-face card-back">
+              <div>
+                <p class="project-meta">Details</p>
+                <p class="project-desc">Built on Google Apps Script and Google Sheets, HRPulse verifies a person's coordinates against the expected location before logging their attendance — turning a spreadsheet into a lightweight, location-checked attendance system with no separate app or server needed.</p>
+              </div>
+              <a href="https://github.com/alygo179-wq" target="_blank" rel="noopener" class="card-link">View more on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!--
+        COPY-PASTE TEMPLATE FOR A NEW PROJECT — uncomment and edit:
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <p class="project-meta">Your Role · Where · Year</p>
+              <h3 class="project-title">Project Name</h3>
+              <p class="project-desc">One short sentence — the hook.</p>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-face card-back">
+              <div>
+                <p class="project-meta">Details</p>
+                <p class="project-desc">A fuller description — what it does, what you built, what's notable about it.</p>
+              </div>
+              <a href="https://github.com/your-repo" target="_blank" rel="noopener" class="card-link">View more on GitHub</a>
+            </div>
+          </div>
+        </article>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <h2 class="section-heading reveal"><span class="heading-comment">// </span>skills</h2>
+
+      <div class="skill-ring-wrap reveal" id="skillRingWrap">
+        <div class="skill-ring" id="skillRing">
+          <span data-group="web">HTML5</span>
+          <span data-group="web">CSS3</span>
+          <span data-group="web">JavaScript</span>
+          <span data-group="web">MySQL</span>
+          <span data-group="prog">C</span>
+          <span data-group="prog">C++</span>
+          <span data-group="prog">Python</span>
+          <span data-group="prog">Kotlin</span>
+          <span data-group="prog">x86 Assembly</span>
+          <span data-group="tools">Git</span>
+          <span data-group="tools">GitHub</span>
+        </div>
+        <div class="skill-ring-floor"></div>
+      </div>
+      <p class="skill-hint">drag to spin · hover a tag to pause</p>
+
+      <div class="skill-legend">
+        <span><i class="dot dot-web"></i>Web Development</span>
+        <span><i class="dot dot-prog"></i>Programming</span>
+        <span><i class="dot dot-tools"></i>Developer Tools</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="leadership" id="leadership">
+    <div class="section-inner">
+      <h2 class="section-heading reveal"><span class="heading-comment">// </span> interests</h2>
+      <div class="leadership-grid">
+        <div class="reveal">
+          <h3 class="skill-group-title">Interests</h3>
+          <p class="entry-desc"><strong>Tech:</strong> AI, cybersecurity, data science, open-source contribution, networking, and exploring web frameworks.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ============================================================
+    CERTIFICATIONS — add new certification cards inside .cert-grid
+    below. See README.md ("Adding a new certification") for a
+    copy-paste template. Each card needs its real "Show credential"
+    URL — replace [add credential link] with the actual link from
+    the issuing platform (Credly, Forage, Coursera, etc.).
+    ============================================================
+  -->
+  <section class="certs" id="certs">
+    <div class="section-inner">
+      <h2 class="section-heading reveal"><span class="heading-comment">// </span>certifications</h2>
+
+      <div class="cert-grid">
+        <article class="cert-card tilt reveal" data-tilt-max="8">
+          <div class="cert-card-head">
+            <span class="cert-dot cert-dot-forage"></span>
+            <div>
+              <h3 class="cert-title">Cybersecurity Job Simulation</h3>
+              <p class="cert-issuer">Mastercard · Forage — Issued Jul 2026</p>
+            </div>
+          </div>
+          <a href="https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_6a5c639f4bffa9009b5074e0_1784445418587_completion_certificate.pdf" target="_blank" rel="noopener" class="cert-link">Show credential</a>
+        </article>
+
+        <article class="cert-card tilt reveal" data-tilt-max="8">
+          <div class="cert-card-head">
+            <span class="cert-dot cert-dot-forage"></span>
+            <div>
+              <h3 class="cert-title">Cyber Job Simulation</h3>
+              <p class="cert-issuer">Deloitte Australia · Forage — Issued Jul 2026</p>
+            </div>
+          </div>
+          <div class="cert-skills"><span>Web Application Security</span><span>Log Analysis</span></div>
+          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_6a5c639f4bffa9009b5074e0_1784441704292_completion_certificate.pdf" target="_blank" rel="noopener" class="cert-link">Show credential</a>
+        </article>
+
+        <article class="cert-card tilt reveal" data-tilt-max="8">
+          <div class="cert-card-head">
+            <span class="cert-dot cert-dot-google"></span>
+            <div>
+              <h3 class="cert-title">Play It Safe: Manage Security Risks</h3>
+              <p class="cert-issuer">Google — Issued Aug 2026</p>
+            </div>
+          </div>
+          <div class="cert-skills"><span>SIEM</span><span>Cyber Attacks</span><span>+9 more</span></div>
+          <a href="https://www.coursera.org/account/accomplishments/records/8DFK9K66AIXI" target="_blank" rel="noopener" class="cert-link">Show credential</a>
+        </article>
+
+        <article class="cert-card tilt reveal" data-tilt-max="8">
+          <div class="cert-card-head">
+            <span class="cert-dot cert-dot-google"></span>
+            <div>
+              <h3 class="cert-title">Foundations of Cybersecurity</h3>
+              <p class="cert-issuer">Google — Issued Aug 2026</p>
+            </div>
+          </div>
+
+          <div class="cert-skills"><span>SIEM</span><span>Cybersecurity</span><span>+3 more</span></div>
+          <a href="https://www.coursera.org/account/accomplishments/records/QWV6JKVMKF9H" target="_blank" rel="noopener" class="cert-link">Show credential</a>
+        </article>
+
+        <!--
+        COPY-PASTE TEMPLATE FOR A NEW CERTIFICATION — uncomment and edit:
+
+        <article class="cert-card tilt reveal" data-tilt-max="8">
+          <div class="cert-card-head">
+            <span class="cert-dot cert-dot-forage"></span>
+            <div>
+              <h3 class="cert-title">Certification Name</h3>
+              <p class="cert-issuer">Issuer · Platform — Issued Month Year</p>
+            </div>
+          </div>
+          <p class="cert-id">Credential ID <span>YOUR-CREDENTIAL-ID</span></p>
+          <div class="cert-skills"><span>Skill One</span><span>Skill Two</span></div>
+          <a href="[add credential link]" target="_blank" rel="noopener" class="cert-link">Show credential</a>
+        </article>
+        -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="section-inner contact-grid">
+    <div class="contact-copy">
+      <h2 class="section-heading reveal"><span class="heading-comment">// </span>contact.sh</h2>
+      <p class="contact-text reveal">Open to project-based learning opportunities and internships — especially in AI, cybersecurity, or data. Reach out any time.</p>
+      <div class="hero-links reveal">
+        <a href="mailto:alygo179@gmail.com" class="magnetic"><span class="flag">--email</span> alygo179@gmail.com</a>
+        
+        <a href="https://linkedin.com/in/ali-gohar-3697a9399" target="_blank" rel="noopener" class="magnetic"><span class="flag">--linkedin</span> ali-gohar</a>
+        <a href="https://github.com/alygo179-wq" target="_blank" rel="noopener" class="magnetic"><span class="flag">--github</span> alygo179-wq</a>
+      </div>
+      <p class="footer-note">// © <span id="year"></span> Ali Gohar — compiled with Three.js</p>
+    </div>
+    <div class="signature-orb-wrap reveal" aria-hidden="true">
+      <canvas id="signature-canvas"></canvas>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
